@@ -1,0 +1,44 @@
+@import "../../css-config/mixins.scss";
+
+.container-main{
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    
+    height: 800px;
+}
+.wrap-container{
+    display: flex; 
+padding: 1.45rem; 
+flex-direction: column; 
+border-radius: 0.5rem; 
+border-width: 1px; 
+border-color: #000000; 
+max-width: 700px;
+background-color: #575757;
+}
+.title{
+    font-size: 2.5rem;
+line-height: 2rem; 
+font-weight: 700; 
+}
+.mes{
+    margin-top: 0.9rem; 
+    font-size: 1.125rem;
+    line-height: 1.75rem; 
+    font-weight: 700; 
+    
+}
+.que{
+    margin-top: 1.25rem; 
+    font-size: 1rem;
+    line-height: 1.5rem; 
+}
+.lol{
+    text-decoration: underline;
+}
+.continuebt{
+    margin-top: 1.25rem; 
+font-weight: 700; 
+color: azure;
+}

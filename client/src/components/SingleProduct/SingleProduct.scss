@@ -1,0 +1,317 @@
+@import "../../css-config/mixins.scss";
+.single-product-main-content{
+    width: 100%;
+    overflow: hidden;
+    @include mb{
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
+    }
+    @include tb{
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+}
+.single-product-page{
+    display: flex; 
+    flex-direction: column; 
+    
+    @include tb{
+        padding-left: 2.5rem;
+        padding-right: 2.5rem; 
+    }
+    @include lg{
+        flex-direction: row; 
+        translate:40px;
+    }
+    @include md{
+        translate:6px;
+    }
+    @include xxl{
+        translate:130px;
+    }
+}
+.leftside{
+    width: 100%; 
+    padding-left:20%;
+    max-width: 900px!important;
+    @include tb{
+        width: auto; 
+    }
+    @include lg{
+        margin-left: 0;
+        margin-right: 0; 
+        max-width: 100%; 
+    }
+}
+.rightside{
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    position: relative;
+    z-index: 1;
+    transform: translateX(-200px);
+    @include mb{
+        transform: translateX(25px);
+    }
+    @include lg{
+        transform: translateX(-150px);
+    }
+}
+.name{
+    margin-bottom: 0.5rem; 
+    font-weight: 600; 
+    line-height: 1.25; 
+    color: rgb(219, 218, 216);
+    font-size: 34px;
+    cursor: default;
+}
+.subtitlesp{
+    margin-bottom: 1.25rem; 
+    font-size: 1.125rem;    
+    line-height: 0.35rem; 
+    font-weight: 600; 
+    color: azure;
+    cursor: default;
+    @include lg{
+        line-height: 1.20rem;
+    }
+    @include md{
+        line-height: 0.35rem;
+    }
+}
+.price
+{
+    color: rgb(201, 191, 175);
+    display: flex;
+    align-items: center;
+    gap:10px;
+    cursor: default;
+    @include lg{
+        display: inline-block;
+    }
+    @include md{
+        display: flex;
+    }
+}
+.mrp{
+    margin-right: 0.5rem; 
+    font-size: 1.125rem;
+    line-height: 1.75rem; 
+    font-weight: 600; 
+}
+.strikedp{
+    font-size: 1rem;
+    line-height: 1.5rem; 
+    font-weight: 500; 
+    text-decoration: line-through; 
+}
+.discountp{
+    font-size: 1rem;
+    line-height: 1.5rem; 
+    font-weight: 500; 
+    color: #fc6d0f; 
+}
+.taxes{
+    font-weight: 500;
+    color: grey;
+    cursor: default;
+}
+.sizes{
+    margin-bottom: 0.5rem;
+    margin-top: 2.5rem;
+    cursor: default; 
+}
+.sizect{
+    display: flex; 
+    margin-bottom: 0.5rem; 
+    justify-content: space-between; 
+}
+.sizetitle{
+    font-weight: 600;
+    color: #fc6d0f;
+}
+.sizesgrid{
+    display: grid ; 
+    gap: 0.5rem; 
+    grid-template-columns: repeat(3, 1fr);
+    @include mb{
+        width: calc(90% - 15px);
+    }
+    @include lg{
+        width: calc(140% - 0px);
+    }
+    @include xl{
+        width: calc(100% - 0px);
+    }
+    @include xxl{
+        width: calc(100% - 40px);
+    }
+    @media screen and (min-width:1700px) {
+        width: calc(110% - 0px);
+    }
+}
+.sizebt{
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem; 
+    border-radius: 0.475rem; 
+    border-width: 1px; 
+    font-weight: 500; 
+    text-align: center; 
+    &:hover{
+        cursor: pointer;
+        background-color: #FC6D0F;
+    }
+    &:active{
+        background-color: rgb(85, 78, 78);
+    }
+}
+.button-selected{
+    background-color:#FC6D0F !important;
+    color: #ffffff;
+}
+.sizebtdis{
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem; 
+    border-radius: 0.475rem; 
+    border-width: 1px; 
+    font-weight: 500; 
+    text-align: center; 
+    background-color: #ccc;
+    opacity: 0.7;
+    pointer-events: none; 
+     cursor: not-allowed;
+}
+.szerror{
+    margin-top: 0.25rem; 
+    color: #DC2626; 
+}
+.Add-to-cart{
+    margin-top: 4.4rem;
+    margin-left: 0.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem; 
+    margin-bottom: 0.95rem; 
+    border-radius: 9999px; 
+    width: 50%; 
+    font-size: 1.125rem;
+    line-height: 1.75rem; 
+    font-weight: 100; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #ffffff; 
+    background-color: #000000; 
+    transition-property: transform;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms; 
+    &:hover{
+        opacity: 0.65; 
+    }
+    span{
+        vertical-align: middle;
+        padding-left: 5px;
+    }
+    @include mb{
+        margin-left: 10px;
+        width: calc(80% - 5px);
+    }
+    @include lg{
+        width: calc(130% - 20px);
+        margin-left: 0;
+    }
+    @media screen and (min-width:1180px){
+        width: calc(120% - 20px);
+    }
+    @include md{
+        width: calc(100% - 20px);
+    }
+    @include xxl{
+        width: calc(110% - 10px);
+        margin-left: 0.5rem;
+    }
+}
+.wishltbt{
+    margin-top: 0.15rem;
+    margin-left: 0.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem; 
+    margin-bottom: 0.95rem; 
+    border-radius: 9999px; 
+    width: 50%; 
+    font-size: 1.125rem;
+    line-height: 1.75rem; 
+    font-weight: 100; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #ffffff; 
+    background-color: #fc6d0f; 
+    transition-property: transform;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+    &:hover{
+        opacity: 0.65; 
+    }
+    span{
+        vertical-align: -3px;
+        padding-left: 5px;
+    }
+    @include mb{
+        margin-left: 10px;
+        width: calc(80% - 5px);
+    }
+    @include lg{
+        width: calc(130% - 20px);
+        margin-left: 0;
+    }
+    @media screen and (min-width:1180px){
+        width: calc(120% - 20px);
+    }
+    @include md{
+        width: calc(100% - 20px);
+    }
+    @include xxl{
+        width: calc(110% - 10px);
+        margin-left: 0.5rem;
+    }
+}
+.descbg{
+    display: inline-block;
+    background-color: #000000;
+    width: 53%;
+    text-align: center;
+    padding:0px 12px;
+    border-radius: 18px;
+    margin-top: 15px;
+    @include mb{
+        width: 85%;
+    }
+    @include sm{
+        margin-left: 4%;
+    }
+    @include lg{
+        margin-left: 0;
+        width:300px;
+    }
+    @include xxl{
+        width:400px;
+        translate: (25px 0);
+    }
+}
+.proddesc-title{
+    padding-top: 1em;
+    margin-bottom: 0.55rem; 
+    font-size: 1.525rem;
+    line-height: 1.75rem; 
+    font-weight: 700; 
+    color: #fc6d0f;
+}
+.prod-desc{
+    color: rgb(245, 245, 245);
+    margin-bottom: 1.25rem;
+    
+}
+.swipemb{
+    font-size: x-large;
+    margin-top: -70px;
+    color: #fc6d0f;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    @include lg{
+        display: none;
+}
+}

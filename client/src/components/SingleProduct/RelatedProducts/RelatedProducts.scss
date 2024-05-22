@@ -1,0 +1,26 @@
+@import "../../../css-config/mixins.scss";
+
+.rel-prod{
+    margin-top: 50px;
+    margin-bottom: 100px;
+    margin-left: 10%;
+    margin-right: 10%;
+    @media (min-width: 768px) { 
+    margin-bottom: 0; 
+    margin-top: 100px;
+ }
+}
+.rel-heading{
+    margin-bottom: 1.05rem; 
+    font-size: 2.0rem;
+    line-height: 2rem; 
+    font-weight: 700; 
+    margin-left: 7%;
+    color: rgb(218, 218, 218);
+    @include mb{
+        font-size: 1.5rem;
+    }
+    @include lg{
+        font-size: 2rem;
+    }
+}

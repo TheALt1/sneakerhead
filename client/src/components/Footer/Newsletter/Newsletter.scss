@@ -1,0 +1,139 @@
+@import "../../../css-config/mixins.scss";
+
+.bt{
+    background: linear-gradient(45deg, #fb4764, #f88d5f) no-repeat;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: white;
+  padding: 11px 35px;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 50px;
+  margin-top: 10px;
+  transition: transform 1s ;
+}
+.bt:hover{
+  transform: scale(1.1);
+}
+
+.form input{
+        height: 26px;
+        width: 100%;
+        background: none;
+        border: none;
+        outline: none;
+        color: #a2a2a2;
+        font-size: 1.2rem;
+        padding-bottom: 5px;
+        
+}
+
+.form input::placeholder {
+    color: #a2a2a2;
+    text-align: center;
+  }
+
+  .newsletter-section{
+    width:100%;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    background: darkgrey url("../../../assets/newsletter-bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    .newsletter-content{
+      width: 30%;
+      height: 80%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0 auto;
+      text-align:center;
+      background-color: grey;
+      border-radius: 10px;
+      @include mb{
+        width: 80%;
+      }
+      @include md{
+        width: 40%;
+      }
+    }
+    .big-text{
+      padding-top: 30px;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      line-height: 30px;
+      font-weight: 900;
+      font-size: 60px;
+      color:rgb(255, 255, 255);
+      @include mb{
+        font-size: 20px;
+        font-weight: 600;
+        padding-top: 20px;
+      }
+      @include sm{
+        font-size: 24px;
+        font-weight: 600;
+      }
+      @include lg{
+        font-size: 30px;
+        font-weight: 600;
+      }
+      @include md{
+        font-size: 50px;
+        font-weight: 700;
+        padding-top: 30px;
+      }
+    }
+    .small-text{
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      color: rgba(253, 115, 1, 0.9);
+      font-weight: 800;
+      @include mb{
+        font-size: 14px;
+        font-weight: 600;
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+      @include sm{
+        font-size: 18px;
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+    .text{
+      padding-top: 15px;
+      padding-bottom: 15px;
+      @include mb{
+        padding-top: 10px;
+        font-size: medium;
+      }
+      @include md{
+        padding-top: 15px;
+        font-size: medium;
+      }
+    }
+    .social-icons{
+      padding-top: 10px;
+      display: flex;
+      gap: 40px;
+      cursor: pointer;
+      transition: transform 2s linear;
+      a{
+        color: black;
+      }
+      .icon:hover{
+        transform: scale(1.2);
+      }
+      @include mb{
+       transform:  translateY(-14px) ;
+       gap: 30px;
+      }
+      @include md{
+        transform: translateY(-8px);
+      }
+    }
+  }

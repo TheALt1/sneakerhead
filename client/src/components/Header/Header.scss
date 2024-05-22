@@ -1,0 +1,229 @@
+@import "../../css-config/mixins.scss";
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap');
+.main-header {
+    width: 100%;
+    padding: 0 20px;
+    z-index: 99;
+    background-color: #212121;
+    color: white;
+    border-bottom: 1px solid;
+    border-color: rgba(0, 0, 0, 0.1);
+    @include md {
+        padding: 0 40px;
+    }
+    .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 50px;
+        max-width: 1200px;
+        margin: 0 auto;
+        @include md {
+            height: 80px;
+        }
+    }
+    .left ul {
+        list-style-type: none;
+        display: none;
+        gap: 25px;
+        @include md {
+            display: flex;
+        }
+        @include xxl{
+            position: absolute;
+            line-height: 50%;
+            left: 5%;
+        }
+        li {
+            font-size: 16px;
+            font-weight: 600;
+            text-transform: uppercase;
+            cursor: pointer;
+            &:hover {
+                opacity: 0.6;
+            }
+        }
+    }
+    .center {
+        font-size: 22px;
+        font-weight: 700;
+        font-family: 'Oswald', sans-serif;
+        cursor: pointer;
+        @include mb{
+            position: absolute;
+            left: 5%;
+            font-size: 24px
+        }
+        @include sm{
+            left: 5%;
+        }
+        @include tb{
+            left: 5%;
+        }
+        @include md {
+            font-size: 34px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        @include xxl{
+            left: 50%;
+        }
+    }
+    .right {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        @include md {
+            gap: 25px;
+        }
+        @include xxl{
+            position: absolute;
+            line-height: 50%;
+            right: 5%;
+        }
+        
+        svg {
+            font-size: 24px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            &:hover {
+                transform:scale(1.4);
+            }
+        }
+        .cart-icon {
+            position: relative;
+            span {
+                min-width: 20px;
+                text-align: center;
+                background: #8e2de2;
+                padding: 2.5px;
+                position: absolute;
+                top: -5px;
+                right: -12px;
+                font-size: 12px;
+                line-height: 1;
+                border-radius: 10px;
+                transform: scale(1.1);
+            }
+        }
+    }
+    &.sticky-header {
+        background-color: #212121;
+        color: white;
+        position: sticky;
+        top: 0;
+        transform: translateY(-60px);
+        animation: StickyHeader 0.3s ease forwards;
+    }
+}
+.menuac{
+    @include mb{
+        display: none;
+    }
+    @include md{
+        display: block;
+    }
+}
+.menuac .overlay{
+    @include md{
+        display: block;
+    }
+}
+.overlay {
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 20px;
+    display: none;
+    z-index: 994; 
+    @include md{
+        top: 8.5%; /* Position it below the icon */
+    left: 80%;
+    width: 12rem;
+    }
+    @include xxl{
+        top: 210%; /* Position it below the icon */
+    left: 10%;
+    width: 12rem;
+    }
+  }
+  .overlay p{
+    display: block;
+  }
+  .overlay p{
+    color: #212121;
+    padding-bottom: 15px;
+    font-weight: 900;
+    font-size: x-large;
+  }
+  .overlay a {
+    display: block;
+    text-decoration: none;
+    color: #6e6e6e;
+    padding-bottom: 12px;
+
+    margin-top: 10px;
+    font-size: large;
+    &:hover{
+        color: black;
+    }
+  }
+.usernamedp{
+    @include mb{
+        display: none;
+    }
+    @include md{
+        display: inline;
+    }
+}
+@keyframes StickyHeader {
+    0% {
+        transform: translateY(-60px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+.ctmenu{
+  background-color: white;
+    position: absolute;
+    z-index: 233;
+    padding: 4px;
+    top: 6%;
+    border-radius: 8px;
+    @include mb{
+        display: none;
+    }
+    @include md{
+        left: 15%;
+        display: block;
+    }
+    @include xl{
+        left: 17%;
+    }
+    @media only screen and (max-width: 1530px){
+        left: 19%;
+    }
+    @include xxl{
+        left: 12.7%;
+    }
+    a{
+        text-decoration: none;
+    }
+}
+.showltmenu{
+    display: flex; 
+padding-left: 0.85rem;
+padding-right: 0.85rem; 
+justify-content: space-around; 
+align-items: center; 
+color: #000000;
+text-decoration: none;
+border-radius: 0.375rem; 
+height: 3rem; 
+z-index: 233;
+&:hover {
+    background-color:   rgba($color: #d4d4d4, $alpha: 1.0);
+}
+}

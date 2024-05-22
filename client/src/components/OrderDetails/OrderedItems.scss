@@ -1,0 +1,74 @@
+@import "../../css-config/mixins.scss";
+.order-card{
+    width: calc(40% - 5px);
+    margin-bottom: 20px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    @include mb{
+        flex-direction: column;
+        align-self: center;
+    }
+    @include md{
+        flex-direction: row;
+    }
+    .order-thumb{
+        margin-left: 20px;
+        @include mb{
+            height: 200px;
+        }
+        @include tb{
+            height: 250px;
+        }
+        @include lg{
+            height: 220px;
+        }
+        @include md{
+            height: 200px;
+        }
+        img{
+            transition: all ease 0.3s;
+            display: block;
+            width: 100%;
+            &:hover {
+                transform: scale(1.1);
+                }
+                @include lg{
+                    width: 80%;
+                    transform: translateX(8%);
+                }
+                @include md{
+                    width: 100%;
+                    transform: translateX(0);
+                }
+        } 
+    }
+    .order-details{
+        margin-left: 20px;
+        .name{
+            font-size: 20px;
+            color: rgb(255, 255, 255);
+            display: block;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            @include mb{
+                font-size: 16px;
+            }
+            @include md{
+                font-size: 20px;
+                margin-bottom: 10px;
+            }
+        }
+        .price{
+            font-size: 18px;
+            color: rgb(161, 161, 161);
+            @include mb{
+                font-size: 14px;
+            }
+            @include md{
+                font-size: 20px;
+            }
+        }
+    }
+}

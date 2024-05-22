@@ -1,0 +1,203 @@
+@import "../../css-config/mixins.scss";
+.cart-container{
+    width: 96%;
+    margin:2%;
+    border-radius: 14px;
+    overflow: hidden;
+    background-color: #575757;
+@media (min-width: 768px) { 
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    width: 96%;
+ }
+}
+.empty-cart{
+    font-size: 2em;
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include mb{
+        font-size: 1.3em;
+    }
+    @include lg{
+        font-size: 3em;
+    }
+
+    span{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    div{
+        margin-top: 5%;
+    }
+    .return-cta{
+        padding: 5%;
+        width: 160px;
+        background-color: #fc6d0f;
+        border-radius: 10px;
+        font-size: medium;
+        @include mb{
+            font-size: small;
+            width: 130px;
+            padding: 8%;
+        }
+        @include lg{
+            padding: 5%;
+            width: 180px;
+            font-size: large;
+        }
+        &:hover{
+            color: #c5c5c5;
+        }
+    }
+
+}
+.h-cart{
+    margin-top: 2rem; 
+    text-align: center;
+@media (min-width: 768px) { 
+    margin-top: 0; 
+ }
+}
+.hdcpg{
+    margin-bottom: 1.25rem; 
+    font-weight: 600; 
+    line-height: 1.25; 
+    font-size: 28px;
+    color: #dfdfdf;
+@media (min-width: 768px) { 
+    font-size: 34px;
+ }
+}
+.cart-content{
+    display: flex; 
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem; 
+    flex-direction: column; 
+    gap: 3rem;
+    margin-left: 15%;
+@media (min-width: 1024px) { 
+    flex-direction: row;
+    justify-content: center; 
+ }
+}
+.cartit{
+    flex: 2;
+    position: relative;
+    left: -5%;
+}
+.headit{
+    font-size: 1.175rem;
+    line-height: 1.75rem; 
+    font-weight: 700; 
+    color: #c2c2c2;
+}
+
+.sumsec{
+    flex: 1;
+}
+.sumhd{
+    font-size: 1.125rem;
+    line-height: 1.75rem; 
+    font-weight: 700;
+    color:#dfdfdf ; 
+}
+.summarytext{
+    padding: 1.25rem; 
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem; 
+    border-radius: 0.75rem; 
+    background-color: white;
+    width: 80%;
+}
+.textcon{
+    display: flex; 
+    gap: 45%;
+    @include lg{
+        flex-direction: column;
+    }
+    @include xxl{
+        flex-direction: row;
+    }
+}
+.sumst-title{
+    font-weight: 500; 
+    color: #000000; 
+    text-transform: uppercase; 
+@media (min-width: 768px) { 
+    font-size: 1.125rem;
+    line-height: 1.75rem; 
+ }
+}
+.ctpricetext{
+    font-weight: 500; 
+    color: #000000; 
+    @include mb{
+        margin-left: -40px;
+    }
+    @include sm{
+        margin-left: 55px;
+    }
+@media (min-width: 768px) { 
+    font-size: 1.125rem;
+    line-height: 1.75rem; 
+    margin-left: 0;
+ }
+}
+.line{
+    color: rgb(206, 206, 206);
+}
+.sumdisclaimer{
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem; 
+    margin-top: 1.25rem; 
+    border-top-width: 1px; 
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+     
+@media (min-width: 768px) { 
+   }
+}
+.buybt{
+    margin-top: 0.15rem;
+    margin-left: 0.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem; 
+    margin-bottom: 0.95rem; 
+    border-radius: 9999px; 
+    width: 50%; 
+    font-size: 1.125rem;
+    line-height: 1.75rem; 
+    font-weight: 100; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #ffffff; 
+    background-color: #fc6d0f; 
+    transition-property: transform;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+    &:hover{
+        opacity: 0.65; 
+    }
+    span{
+        vertical-align: -3px;
+        padding-left: 5px;
+    }
+    @include mb{
+        margin-left: 4px;
+        width: calc(80% - 5px);
+    }
+    @include lg{
+        width: calc(90% - 20px);
+        margin-left: 0;
+    }
+    @media screen and (min-width:1180px){
+        width: calc(90% - 20px);
+    }
+    @include md{
+        width: calc(88% - 20px);
+    }
+    @include xxl{
+        width: calc(80% - 10px);
+        margin-left: 0.2rem;
+    }
+}

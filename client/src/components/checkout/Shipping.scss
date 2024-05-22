@@ -1,0 +1,263 @@
+@import "../../css-config/mixins.scss";
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+.maincontainer{
+    background-color: #f8f8f8;
+    border-radius: 4px;
+    @include mb{
+        margin: 2% 0 5% 0;
+    }
+    @include lg{
+        margin:2% 8% 8% 8%;
+    }
+}
+h2{
+    text-align: center;
+    padding-top: 1.45rem;
+    padding-bottom: 1.45rem;
+    font-size: xx-large;
+    display: none;
+    @include sm{
+        display: block;
+    }
+}
+input{
+    border: 1px solid rgb(173, 173, 173) ;
+    border-radius: 6px;
+    font-size: larger;
+    padding-left: 8px;
+    padding-right: 8px;
+    width: 230%;
+    &:focus{
+        background-color: #f0f0f0;
+    }
+}
+.row{
+    display: grid;
+    grid-template-columns: 2fr 1fr; // The left column is twice the size of the right column
+    grid-gap: 20px; 
+    @include mb{
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+    @include tb{
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+    @include lg{
+        grid-template-columns: 2fr 1fr; // The left column is twice the size of the right column
+    }
+}
+.addcont{
+    flex: 0 0 66.666667%; // This is equivalent to col-md-8 in Bootstrap
+  max-width: 66.666667%;
+  padding-right: 15px;
+  padding-left: 15px;
+  
+  @include mb{
+    flex: 0 0 76.666667%; // This is equivalent to col-md-8 in Bootstrap
+    max-width: 100%;
+    order: 2;
+  }
+  @include sm{
+    order:1;
+  }
+  @include tb{
+    flex: 0 0 76.666667%; // This is equivalent to col-md-8 in Bootstrap
+    max-width: 100%;
+}
+  @include lg{
+    flex: 0 0 76.666667%; // Custom behavior for medium screens
+    max-width: 76.666667%;
+  }
+}
+.mb-3{
+    margin-bottom: 1rem;
+    padding-left: 15px;
+    padding-right: 15px;
+    @include mb{
+        flex: 0 0 50%; // This represents a 6-unit column for medium-sized screens
+        max-width: 45%;
+    }
+    @include lg{
+        flex: 0 0 50%; // This represents a 6-unit column for medium-sized screens
+        max-width: 50%;
+    }
+}
+.mb-6{
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 1rem;
+}
+.input-group{
+    display: flex;
+    gap: 5px;
+    span {
+        border: 1px solid #808080; 
+        padding: 5px; 
+        border-radius: 5px;
+        width: 30px;
+      }
+}
+.text-muted{
+    color: #808080;
+}
+.SA{
+    margin-bottom: 10px;
+    @include mb{ 
+     padding-left: 15px;
+    font-size: larger;
+    }
+    @include lg{
+        padding-right: 15px; // Adjust as needed
+        padding-left: 15px; 
+        font-size: x-large;
+    }
+}
+.crt{
+    font-size: x-large;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.col-md-6{
+    padding-right: 15px; // Adjust as needed
+    padding-left: 15px; 
+    @include mb{
+        flex: 0 0 50%; // This represents a 6-unit column for medium-sized screens
+        max-width: 47%;
+    }
+    @include lg{
+        flex: 0 0 50%; // This represents a 6-unit column for medium-sized screens
+        max-width: 50%;
+    }
+}
+
+textarea{
+    padding-left: 8px;
+    padding-right: 8px;
+    width: 230%;
+    border: 1px solid rgb(173, 173, 173) ;
+    border-radius: 6px;
+    resize: none;
+    &:focus{
+        background-color: #f0f0f0;
+
+    }
+}
+.custom-select{
+    background-color: #f8f8f8;
+    font-size: x-large;
+    border-radius: 5px;
+    width: 100%;
+}
+.custom-s{
+    background-color: #f8f8f8;
+    border-radius: 5px;
+    width: 210%;
+    @include mb{
+        font-size: larger;
+    }
+    @include lg{
+        font-size: x-large;
+    }
+}
+.row1{
+  display: flex;
+  gap: 50%;
+  @include mb{
+    flex: 0 0 91.66667%; // Represents a 5-unit column for medium-sized screens
+  max-width: 91.66667%;
+  flex-direction: column;
+  }
+  @include lg{
+    flex: 0 0 41.66667%; // Represents a 5-unit column for medium-sized screens
+    max-width: 41.66667%;
+    flex-direction: row;
+}}
+#zip{
+    width: 130%;
+}
+.custom-checkbox{
+    display: flex;
+    gap: 1rem;
+    padding-left: 1rem;
+}
+.custom-control-input{
+    flex: 0 0 2.66667%; // Represents a 5-unit column for medium-sized screens
+ 
+    @include mb{
+        flex: 0 0 6.66667%;
+        max-width: 20.66667%;
+    }
+    @include sm{
+        flex: 0 0 7.66667%;
+        max-width: 10.66667%;
+    }
+
+    @include lg{
+        flex: 0 0 2.66667%;
+        max-width: 20.66667%;
+    }
+}
+.mt-column{
+    flex: 0 0 63.33333%;
+    max-width: 93.33333%;
+    order: 1;
+    margin-bottom: 1rem;
+    padding-left: 15px;
+    margin-top: 15px;
+    @include sm {
+        margin-top: 0;
+    }
+}
+.list-group{
+    list-style: none;
+    padding: 0;
+}
+.my-list-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    padding: 1rem 0;
+    border: 1.3px solid rgb(209, 209, 209);
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom:4px;
+}
+.my-0{
+    margin: 0;
+    font-size: medium;
+}
+.list-group-item{
+    display: flex;
+  justify-content: space-between;
+  border: 1.3px solid rgb(209, 209, 209);
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom:15px;
+}
+.checkoutbtn{
+    background-color: #3b8ee6; 
+    border-radius: 4px;
+  font-size: 1.25rem; 
+  padding: 10px 20px;
+  display: block; 
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: white;
+  @include mb{
+    margin-left: 30px;
+  }
+  @include lg{
+    margin-left: 0;
+  }
+  &:hover{
+    opacity: .8;
+  }
+}

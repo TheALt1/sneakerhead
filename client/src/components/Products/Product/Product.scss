@@ -1,0 +1,108 @@
+@import "../../../css-config/mixins.scss";
+
+.Product-card{
+    width: calc(100% - 5px);
+    margin-bottom: 20px;
+    @include tb{
+        width: calc(45% - 15px);
+        transform: translateX(55px);
+    }
+
+    @include md{
+        width: calc(25% - 15px);
+        transform: translateX(0);
+    }
+    .thumbnail{
+        height: 100%;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.05);
+        margin-bottom: 10px;
+        padding: 25px;
+        display: flex;
+        align-items: center;
+        @include mb{
+            height: 280px;
+        }
+        @media only screen and (min-width:460px){
+            height: 380px;
+        }
+        @include sm{
+            height: 360px;
+        }
+        @include tb{
+            height: 250px;
+        }
+        @include lg{
+            height: 300px;
+        }
+        @include md{
+            height: 350px;
+        }
+        img{
+            transition: all ease 0.3s;
+            display: block;
+            width: 100%;
+            @include mb{
+                width: 100%;
+            }
+            @include sm{
+                width: 80%;
+                transform: translateX(10%);
+            }
+            @include tb{
+                width: 100%;
+                transform: translateX(0%);
+            }
+            &:hover {
+                transform: scale(1.1);
+                }
+                @include lg{
+                    width: 80%;
+                    transform: translateX(8%);
+                }
+                @include md{
+                    width: 100%;
+                    transform: translateX(0);
+                }
+        }
+        
+    }
+    .product-details{
+        .name{
+            font-size: 20px;
+            color: rgb(255, 255, 255);
+            display: block;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            @include mb{
+                font-size: 16px;
+            }
+            @include md{
+                font-size: 20px;
+                margin-bottom: 10px;
+            }
+        }
+        .price{
+            font-size: 18px;
+            color: rgb(161, 161, 161);
+            @include mb{
+                font-size: 14px;
+            }
+            @include md{
+                font-size: 20px;
+            }
+        }
+    }
+    
+}
+.removebtnwl{
+    display: flex;
+    justify-content: center;
+    margin-top: 8px;
+}
+#rmviconwl{
+    &:hover{
+        scale: 1.1;
+    }
+}

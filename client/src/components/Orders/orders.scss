@@ -1,0 +1,96 @@
+@import "../../css-config/mixins.scss";
+
+.orders{
+    background-color: rgb(87, 87, 87);
+    width: 90%;
+    border-radius: 10px;
+    margin-top: 40px;
+    .noorders{
+        display: block;
+        padding: 350px 0px;
+    }
+    .orderstatus{
+        color: rgb(255, 255, 255);
+        background-color: #ff9900;
+        width: 150px;
+        font-size:large;
+        border-radius: 4px;
+        padding: 5px;
+    }
+    hr{
+        width: 90%;
+    }
+    .h2order{
+        color: white;
+        display: block;
+    }
+    h3{
+        color: white;
+        background-color: #818181;
+        width: 350px;
+        margin-bottom: 12px;
+        border-radius: 8px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        font-family: Arial, Helvetica, sans-serif;
+        @include mb{
+            width: 250px;
+            font-size: small;
+        }
+        @include md{
+            width: 300px;
+            font-size: medium;
+        }
+    }
+    .sdtitle{
+        color: #ff9900;
+        font-weight: 800;
+        text-decoration: underline;
+    }
+    .orderbtns{
+        flex: 1;
+        display: grid;
+        gap: 10px;
+        margin: 20px;
+        color: rgb(255, 255, 255);
+        font-size: large;
+        place-items: center;
+       
+        .retrypay{
+            width:150px;
+            font-size:larger;
+            border-radius: 4px;
+            padding: 5px;
+            &:hover{
+                opacity: 0.8;
+                cursor: pointer;
+            }
+        }
+        .orders-add{
+            display: flex;
+            flex-direction: column;
+            background-color: #818181;
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+    }
+}
+.items{
+    display: flex;
+    justify-content: center;
+    @include mb{
+        flex-direction: column;
+    }
+    @include md{
+        flex-direction:row ;
+    }
+    .orderspec{
+        display: flex;
+     flex-direction: column;
+     justify-content: space-evenly;
+     span{
+        color: white;
+     }
+    }
+}

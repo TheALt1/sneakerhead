@@ -1,0 +1,149 @@
+@import "../../../css-config/mixins.scss";
+
+.hero-banner{
+    padding: 40px 0 1px 0;
+    position: relative;
+    background-image:linear-gradient(to right, #444444, #2B2B2B) ;
+    @include md {
+        height: (100vh -80px);
+    }
+    
+
+    .content{
+        height: 100%;
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: column;
+        margin: 0 auto;
+        @include mb{
+            flex-direction: column-reverse;
+        }
+        @include md{
+            flex-direction: row;
+            max-width: 1200px;
+        }
+        @include xxl{
+            max-width: 1500px;
+        }
+        .banner-img{
+            position: relative;
+           // z-index: 3;
+            width: 200px;
+            margin-bottom: 20px;
+            
+            @include mb{
+                width: 75%;
+                align-self:center ;
+                transform: translateY(-40px);
+            }
+            @include sm{
+                transform: translateY(-90px);
+            }
+            @include tb{
+                transform: translateY(-120px);
+                width: 55%;
+            }
+            @include md{
+                width: 55%;
+                margin-right: -22px;
+                margin-top: 50px;
+                margin-bottom: 0;
+            }
+            @include xxl{
+                width: 800px;
+                margin-right: 0;
+                margin-top: 0;
+                transform: translateY(-80px);
+            }
+        }
+        .text-content{
+            color: white;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            @include mb{
+                margin-top: -90px;
+                padding-top: -10%;
+                padding-bottom: 12%;
+            }
+            @include md{
+                    position: absolute;
+                    left: 5%;
+                    top: 50%;
+                    transform: translateY(-38%);
+            }
+            @include xxl{
+                left: 10%;
+                top: 60%;
+                transform: translateY(-47%);
+            }
+            h1{
+                font-size: 80px;
+                font-weight: 700;
+                line-height: 1;
+                margin-bottom: 20px;
+                @include md{
+                    font-size: 180px;
+                }
+            }
+            h3{
+                font-size: 60px;
+                font-weight: 600;
+                line-height: 1;
+                margin-bottom: 20px;
+                @include md{
+                    font-size: 70px;
+                }
+            }
+            p{
+                max-width: 300px;
+                color: rgb(187, 187, 187);
+                font-size: 20px;
+                line-height: 20px;
+                margin-bottom: 20px;
+                @include md{
+                    max-width: 500px;
+                    font: 18px;
+                    line-height: 24px;
+                    margin-bottom: 40px;
+                }
+            }
+            .ctas{
+                display: flex;
+                justify-content: center;
+                gap: 20px;
+                .banner-cta {
+                    text-transform: uppercase;
+                    font-size: 13px;
+                    font-weight: 500;
+                    border: 2px solid white;
+                    padding: 10px 20px;
+                    border-radius: 4px;
+                    cursor: pointer;
+                    &.v2{
+                        background-color: white;
+                        color: black;
+                        border-radius: 4px;
+                    }
+                    &:hover{
+                        border:2px solid rgb(26, 26, 26);
+                        transition:.3s ease all;
+                        background-color: white;
+                        color: #2B2B2B;
+                        font-weight: 700;
+                        border-radius: 4px;
+                    }
+                    &.v2:hover{
+                        border: 2px solid white;
+                        transition: .3s ease all;
+                        color: rgb(255, 255, 255);
+                        background-color: #ff7300;
+                        border-radius: 4px;
+                    }
+                }
+            }
+        }
+    }
+}
+//1:17:08 timestamp

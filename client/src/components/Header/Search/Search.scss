@@ -1,0 +1,113 @@
+@import "../../../css-config/mixins.scss";
+.search-model{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    background-color: rgba($color: #383838, $alpha: 1.0);
+    transform: translateY(100%);
+    animation: slideSearchWindow 0.5s ease forwards;
+    .form-field{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 5px 50px;
+        border-bottom: 1px solid rgba($color: #000000, $alpha: 1.0);
+    }
+    @include mb{
+        padding: 10px 20px;
+    }
+    @include lg{
+        padding: 20px 0;
+    }
+    input{
+        width: 100%;
+        max-width:1200px ;
+        height: 50px;
+        text-align: center;
+        background-color:rgba($color: #383838, $alpha: 1.0);
+        font-size: 24px;
+        color: #ff6e34;
+        outline: none;
+        border: none;
+       // text-transform: uppercase;
+        @include lg{
+            font-size: 40px;
+            height: 60px;
+        }
+        
+    }
+    .etbtn{
+        padding-top: 10px;
+        @include mb{
+            transform: translateX(28px);
+        }
+
+    }
+}
+@keyframes slideSearchWindow{
+    0% {transform: translateY(100%);}
+    100%{transform: translateY(0);}
+}
+.search-result-contents{
+    max-width:calc(100% - 20px) ;
+    margin: 0 auto;
+    
+    @include lg{
+        max-width: 800px;
+    }
+    .start-msg{
+        font-size: 2rem;
+        padding-top: 15px;
+        padding-left: 65px;
+        color: #ff6e34;
+        @include mb{
+            font-size: 1rem;
+            padding-left: 2px;
+        }
+        @include lg{
+            padding-left: 65px;
+            font-size: 2rem;
+        }
+    }
+    .no-results-msg{
+        font-size: 2rem;
+        padding-top: 15px;
+        padding-left: 65px;
+        color: #d3d3d3;
+        @include mb{
+            font-size: 1rem;
+            padding-left: 2px;
+        }
+        @include lg{
+            padding-left: 65px;
+            font-size: 2rem;
+        }
+    }
+    .search-results{
+        height: calc(100vh - 110px);
+        overflow: auto;
+        margin: 20px 0;
+        scrollbar-width: none; /* Hide the default scrollbar */
+        -ms-overflow-style: none; /* Hide the default scrollbar in IE/Edge */
+        
+        
+        @include lg{
+            height: calc(100vh - 160px);
+        }
+        .search-result-item{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 0;
+            border-bottom: 1px solid rgba($color: #000000, $alpha: 0.1);
+            cursor: pointer;
+        }
+
+    }
+}
+.search-results::-webkit-scrollbar {
+    display: none;
+  }

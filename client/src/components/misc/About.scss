@@ -1,0 +1,178 @@
+@import "../../css-config/mixins.scss";
+@property --rotate {
+  syntax: "<angle>";
+  initial-value: 132deg;
+  inherits: false;
+}
+
+:root {
+  --card-height: 65vh;
+  --card-width: calc(var(--card-height) / 1.5);
+  @include mb{
+   --card-height:45vh;
+  }
+  @include sm{
+    --card-height: 65vh;
+  }
+}
+.abtmc{
+    width: 100%;
+    height: 180vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 3rem;
+      @include mb{
+        height: 110vh;
+      }
+      @include lg{
+        height: 180vh;
+      }
+  .abtp{
+    color: #b6b6b6;
+    font-size: x-large;
+    padding-top: 10px;
+    margin: 20px;
+    @include mb{
+      font-size: large;
+      font-weight: 900;
+    }
+    @include tb{
+      font-size: x-large;
+    }
+  }
+  .cardabt{
+    background-image: url(https://res.cloudinary.com/ddtlgvixd/image/upload/v1699014193/IMG-20230917-WA0011_1_gm6hsg.jpg);
+    background-position: center;
+    background-size: cover;
+  width: var(--card-width);
+  height: var(--card-height);
+  padding: 3px;
+  position: relative;
+  border-radius: 6px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  font-size: 1.5em;
+  color: rgb(88 199 250 / 0%);
+  cursor: pointer;
+  font-family: cursive;
+  }
+  .cardabt::before {
+    content: "";
+    width: 104%;
+    height: 102%;
+    border-radius: 8px;
+    background-image: linear-gradient(
+      var(--rotate)
+      , #5ddcff, #3c67e3 43%, #4e00c2);
+      position: absolute;
+      z-index: -1;
+      top: -1%;
+      left: -2%;
+      animation: spin 2.5s linear infinite;
+  }
+  
+  .cardabt::after {
+    position: absolute;
+    content: "";
+    top: calc(var(--card-height) / 6);
+    left: 0;
+    right: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    transform: scale(0.8);
+    filter: blur(calc(var(--card-height) / 6));
+    background-image: linear-gradient(
+      var(--rotate)
+      , #5ddcff, #3c67e3 43%, #4e00c2);
+      opacity: 1;
+    transition: opacity .5s;
+    animation: spin 2.5s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% {
+      --rotate: 0deg;
+    }
+    100% {
+      --rotate: 360deg;
+    }
+  }
+}
+.containerabt {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 140vh;
+    @include mb{
+      width: 80%;
+      height: 40vh;
+    }
+    @include lg{
+      width: 60%;
+      height: 140vh;
+    }
+  }
+  
+  .textabt {
+    font-size: 7vw;
+    letter-spacing: -.01em;
+    line-height: 100%;
+    margin: 0;
+    
+    width: 100%;
+    color: rgb(182, 182, 182, 0.2);
+    background: linear-gradient(to right, #b6b6b6, #b6b6b6) no-repeat;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-size: 0%;
+    transition: background-size cubic-bezier(.1,.5,.5,1) 0.5s;
+    
+  
+    border-bottom: 1px solid #2F2B28;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+    @include mb{
+      font-size: 10vw;
+    }
+    @include lg{
+      font-size: 7vw;
+    }
+  }
+  
+  #spanabt {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #ff9900;
+    color: #0D0D0D;
+    
+    clip-path: polygon(0 50%, 100% 50%, 100% 50%, 0 50%);
+    transform-origin: center;
+    transition: all cubic-bezier(.1,.5,.5,1) 0.4s;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .textabt:hover > #spanabt {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+  
+ #abta {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  
+ 
